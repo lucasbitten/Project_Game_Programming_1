@@ -121,7 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!43 &61750076
+--- !u!43 &468099887
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -553,8 +553,8 @@ MonoBehaviour:
   - {x: -0.084649004, y: 0.008356552, z: 0}
   - {x: -0.0834482, y: -0.026154943, z: 0}
   m_ShapePathHash: 1645185163
-  m_Mesh: {fileID: 1981100492}
-  m_InstanceId: 15230
+  m_Mesh: {fileID: 1520060504}
+  m_InstanceId: 15250
 --- !u!212 &824176210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -665,7 +665,37 @@ Transform:
   m_Father: {fileID: 1418356857}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1200893778
+--- !u!1 &1214292151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1214292152}
+  m_Layer: 0
+  m_Name: DetectShadowPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1214292152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214292151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.05, y: 0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1418356857}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!43 &1394811162
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -828,36 +858,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1214292151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1214292152}
-  m_Layer: 0
-  m_Name: DetectShadowPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1214292152
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214292151}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1418356857}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1407940483
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,8 +926,8 @@ MonoBehaviour:
   - {x: -0.084649004, y: 0.008356552, z: 0}
   - {x: -0.0834482, y: -0.026154943, z: 0}
   m_ShapePathHash: 1645185163
-  m_Mesh: {fileID: 61750076}
-  m_InstanceId: -51934
+  m_Mesh: {fileID: 468099887}
+  m_InstanceId: 15272
 --- !u!212 &1407940486
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1003,6 +1003,8 @@ GameObject:
   - component: {fileID: 1418356857}
   - component: {fileID: 1418356856}
   - component: {fileID: 1418356858}
+  - component: {fileID: 1418356859}
+  - component: {fileID: 1418356860}
   m_Layer: 0
   m_Name: New Sprite (1)
   m_TagString: Untagged
@@ -1098,6 +1100,42 @@ MonoBehaviour:
   - {fileID: 1000891656}
   - {fileID: 797545020}
   - {fileID: 1573255186}
+  playerPosition: {fileID: 1418356857}
+--- !u!50 &1418356859
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418356855}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1418356860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418356855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dab2ca88fbcb074ba8ec7f3d55b1883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1418356859}
+  speed: 10
 --- !u!1 &1462750287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,8 +1204,8 @@ MonoBehaviour:
   - {x: -0.084649004, y: 0.008356552, z: 0}
   - {x: -0.0834482, y: -0.026154943, z: 0}
   m_ShapePathHash: 1645185163
-  m_Mesh: {fileID: 1200893778}
-  m_InstanceId: -52250
+  m_Mesh: {fileID: 1394811162}
+  m_InstanceId: 15290
 --- !u!212 &1462750290
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1232,37 +1270,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1573255185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1573255186}
-  m_Layer: 0
-  m_Name: DetectShadowPoint (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1573255186
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573255185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1418356857}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1981100492
+--- !u!43 &1520060504
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1425,6 +1433,36 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1573255185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573255186}
+  m_Layer: 0
+  m_Name: DetectShadowPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1573255186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573255185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05, y: 0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1418356857}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028100718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,10 +1505,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0.522
   m_ShadowVolumeIntensity: 1
-  m_PointLightInnerAngle: 61.61
-  m_PointLightOuterAngle: 61.61
-  m_PointLightInnerRadius: 8.94134
-  m_PointLightOuterRadius: 22.579401
+  m_PointLightInnerAngle: 59.6
+  m_PointLightOuterAngle: 59.6
+  m_PointLightInnerRadius: 8.4
+  m_PointLightOuterRadius: 23
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5

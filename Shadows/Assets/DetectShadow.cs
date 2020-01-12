@@ -14,7 +14,9 @@ public class DetectShadow : MonoBehaviour
     [SerializeField] Transform[] detectShadowPoints;
 
     private bool IsOnShadow ;
-    
+
+    public Transform playerPosition;
+
     public bool isOnShadow
     {
         get { return IsOnShadow ; }
@@ -44,6 +46,15 @@ public class DetectShadow : MonoBehaviour
     void Update()
     {
         CheckIfInShadow();
+        SendPlayerPositionIfOnSun(isOnShadow);
+    }
+
+    void SendPlayerPositionIfOnSun(bool playerIsOnShadow)
+    {
+        if (!playerIsOnShadow) // Player is on sun, they know were the player is
+        {
+            Debug.Log($"Player Position real time: {playerPosition.position}");
+        }
     }
 
     void CheckIfInShadow()
@@ -54,7 +65,10 @@ public class DetectShadow : MonoBehaviour
             
             for (int i = 0; i < lights.Length ; i++)
             {
-                if (!Physics2D.Raycast(detectShadowPoints[j].position, lights[i].transform.position - detectShadowPoints[j].position, shadowCasters))
+                if (!Physics2D.Raycast(
+                        detectShadowPoints[j].position, 
+                        lights[i].transform.position - detectShadowPoints[j].position, 
+                        shadowCasters))
                 {
     
                     // Debug.DrawLine(detectShadowPoints[j].position, lights[i].transform.position, Color.red);
