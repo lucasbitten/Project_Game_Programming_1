@@ -17,7 +17,7 @@ public class DetectShadow : MonoBehaviour
 
 
 
-    private bool IsVisible;
+    private bool IsVisible = false;
     public bool isVisible
     {
         get { return IsVisible ; }
@@ -46,20 +46,9 @@ public class DetectShadow : MonoBehaviour
     {
         CheckIfInShadow();
 
-        if(isVisible)
-        {
-
-            GetPlayerPosition();
-        }
-    }
-
-    void GetPlayerPosition()
-    {
-        Debug.Log($"Player Position real time: {transform.position}");
     }
 
     bool InLightSpot(Light2D light, Transform detectPoint) // Method to check if the player is at the light range
-
     { 
         // Angles where the cone of light begins and ends
         float startAngle = 90 - light.pointLightOuterAngle/2 +  light.transform.eulerAngles.z;
@@ -81,6 +70,8 @@ public class DetectShadow : MonoBehaviour
 
         float angleBetweenPlayerAndLight = 180 + (Mathf.Atan2(light.transform.position.y - detectPoint.position.y,
             light.transform.position.x - detectPoint.position.x )) * Mathf.Rad2Deg;
+
+        // Debug.Log(angleBetweenPlayerAndLight);
 
         // Checking if the light can spot the player. If any corner is spottable  the whole player is spottable 
 
@@ -120,20 +111,14 @@ public class DetectShadow : MonoBehaviour
 
                 if (InLightSpot(lights[i], detectShadowPoints[j])) // Check for shadows only if the player is at the light range
                 {
-                    //If the player corner is behind something that cast shadows, continue the loop
-                    if (Physics2D.Raycast(detectShadowPoints[j].position, lights[i].transform.position - detectShadowPoints[j].position, shadowCasters))
+                    //If the player corner is not behind something that cast shadows, isVisible = true and return the method
+                    if (!Physics2D.Raycast(detectShadowPoints[j].position, lights[i].transform.position - detectShadowPoints[j].position, 
+                        Vector3.Distance(detectShadowPoints[j].position, lights[i].transform.position ), shadowCasters))
                     {
-
-                        Debug.DrawLine(detectShadowPoints[j].position, lights[i].transform.position, Color.red);
-                        gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
-
-                    } else // If the player corner is not behind something the whole player is visible, so isVisible = true and stop the method
-                    {
-                        Debug.DrawLine(detectShadowPoints[j].position, lights[i].transform.position, Color.blue);
-                        gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+                        // Debug.DrawLine(detectShadowPoints[j].position, lights[i].transform.position, Color.red);
                         isVisible = true;
                         return;
-                    }   
+                    } 
                 }
             }    
         }

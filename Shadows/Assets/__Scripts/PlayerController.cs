@@ -5,9 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D player;
+    public Transform[] shadowPoints;
 
     public float speed = 30.0f;
-    // Start is called before the first frame update
+
+    public List<GameObject> lights = new List<GameObject>();
+    public bool visible;
+
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -16,7 +20,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (lights.Count != 0){
+            visible = true;
+        }else{
+            visible = false;
+        }
+
+
     }
 
     void FixedUpdate()

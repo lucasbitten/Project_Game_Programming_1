@@ -1,0 +1,619 @@
+fileFormatVersion: 2
+guid: b72ca1ae66e8542fa8816aefc3cb96c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8848196752895717215
+    second: textureatlas_0
+  - first:
+      213: 6207595400818702390
+    second: textureatlas_1
+  - first:
+      213: -4668774994770065635
+    second: textureatlas_2
+  - first:
+      213: -3546268944045038403
+    second: textureatlas_3
+  - first:
+      213: -806496261236902507
+    second: textureatlas_4
+  - first:
+      213: 2277714991512252103
+    second: textureatlas_5
+  - first:
+      213: 6625270476664578347
+    second: textureatlas_6
+  - first:
+      213: 1243224276560616683
+    second: textureatlas_7
+  - first:
+      213: -5806707480248465555
+    second: textureatlas_8
+  - first:
+      213: -5645187520236333717
+    second: textureatlas_9
+  - first:
+      213: -6590579073405205811
+    second: textureatlas_10
+  - first:
+      213: 2187468176670210773
+    second: textureatlas_11
+  - first:
+      213: -5905713712024935050
+    second: textureatlas_12
+  - first:
+      213: 7262105575689672211
+    second: textureatlas_13
+  - first:
+      213: 1273241965982079632
+    second: textureatlas_14
+  - first:
+      213: -2357536034959248262
+    second: textureatlas_15
+  - first:
+      213: 6668559062080823323
+    second: textureatlas_16
+  - first:
+      213: 7617899202785272727
+    second: textureatlas_17
+  - first:
+      213: 7953042320718373003
+    second: textureatlas_18
+  - first:
+      213: -6679715681426410602
+    second: textureatlas_19
+  - first:
+      213: 8899186015204555499
+    second: textureatlas_20
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: textureatlas_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 178
+        width: 16
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0013788ade5d84a1a9ca2f074be3badf
+      internalID: -8848196752895717215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 178
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f022f66412477489fb9b689029d7edd5
+      internalID: 6207595400818702390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 178
+        width: 22
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8863ee874724c75a5e7e0c04b48b1f
+      internalID: -4668774994770065635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_3
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 178
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4c93e19cb344d91b01318c61d88a0f
+      internalID: -3546268944045038403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_4
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 133
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352d23eb21fa3491fa23c43f452038aa
+      internalID: -806496261236902507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_5
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 133
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1db7c3dbb384c83ad9d1c63ee1c7bc
+      internalID: 2277714991512252103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 133
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013c051b0e021488d8e95520620ebc1b
+      internalID: 6625270476664578347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_7
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 133
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1577c04979984dd4b50225580ca7690
+      internalID: 1243224276560616683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 88
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8de5344a88444a789710233c234f62
+      internalID: -5806707480248465555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_9
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 88
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de45c4f2bf0c846afac51f9d7c3c476d
+      internalID: -5645187520236333717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_10
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 88
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773570c5f0b2048d1854b56e2267deac
+      internalID: -6590579073405205811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_11
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 88
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1aa1a935a3d41e6b497fa61dc13239
+      internalID: 2187468176670210773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 43
+        width: 23
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2016347b9c4c64a649d856c48304f892
+      internalID: -5905713712024935050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_13
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 44
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f404fa1ac377c468c9e9a04cb61a4ab8
+      internalID: 7262105575689672211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_14
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 22
+        width: 16
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936a685d18f0140df9fc97022ee2c9c1
+      internalID: 1273241965982079632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_15
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 66
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55be7b4ba9c0240aa9812ebe7aec5c1b
+      internalID: -2357536034959248262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_16
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 66
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e189a21651892463aa9b0798e0cf54aa
+      internalID: 6668559062080823323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_17
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 22
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370e0bb8a97494fa2ad0c5bf139d1955
+      internalID: 7617899202785272727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_18
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 22
+        width: 14
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de67a0bbce0c9477c9cb8cf3af39fada
+      internalID: 7953042320718373003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_19
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 22
+        width: 14
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247a1093f9bfc4005a6e7878f2a0eff5
+      internalID: -6679715681426410602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: textureatlas_20
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a7f1526a6494b60ba79ea676b848d2
+      internalID: 8899186015204555499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
