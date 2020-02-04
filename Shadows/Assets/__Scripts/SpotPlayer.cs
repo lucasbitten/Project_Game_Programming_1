@@ -37,11 +37,12 @@ public class SpotPlayer : MonoBehaviour
                 enemy.spotPlayer = true;
                 enemy.chasingPlayer = true;
 
-            } else{
-                spotSign.GetComponent<SpriteRenderer>().sprite = questionMark;
-                enemy.spotPlayer = false;
-                enemy.chasingPlayer = true;
-            }
+            } 
+            // else{
+            //     spotSign.GetComponent<SpriteRenderer>().sprite = questionMark;
+            //     enemy.spotPlayer = false;
+            //     enemy.chasingPlayer = true;
+            // }
         }
     }
 
