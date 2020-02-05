@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+    public enum State
+    {
+        STATE_PATROLLING,
+        STATE_CHASING,
+        STATE_SEARCHING
+    };
 public class Enemy : MonoBehaviour
 {
+
+    public State currentState;
+
 
     private int health;
     private bool SpotPlayer;
@@ -25,7 +34,6 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] LayerMask enemies;
 
-    public bool chasingPlayer;
 
     [SerializeField] float callEnemiesRadius;
     [SerializeField] float sightViewRadius;
@@ -34,21 +42,34 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        currentState = State.STATE_PATROLLING;
         player = FindObjectOfType<PlayerController>();
     }
 
     void Update()
     {
-        if(chasingPlayer)
+
+        switch (currentState)
         {
-            if (PlayerOnRange())
-            {
+
+            case State.STATE_PATROLLING:
+
+                Debug.Log("Patrolling");
+
+                if (spotPlayer)
+                {
+                    currentState = State.STATE_CHASING;
+                } 
+
+            break;
+            case State.STATE_CHASING:
+                Debug.Log("Chasing");
                 ChasePlayer();
-            } else 
-            {
-                spotPlayer = false;
-                chasingPlayer = false;
-            }
+
+            break;
+            case State.STATE_SEARCHING:
+                Debug.Log("Searching");
+            break;
         }
     }
 
@@ -65,7 +86,7 @@ public class Enemy : MonoBehaviour
     void ChasePlayer()
     {
 
-        float step = 10 * Time.deltaTime;
+        float step = 3 * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step); 
 
         if (player.transform.position.x > transform.position.x && !isFacingRight)
@@ -88,7 +109,7 @@ public class Enemy : MonoBehaviour
 
         for (int i = 0; i < results.Length; i++)
         {
-            if (!results[i].GetComponent<Enemy>().chasingPlayer)
+            if (results[i].GetComponent<Enemy>().currentState != State.STATE_CHASING)
             {
                 StartCoroutine(StartToChase(results[i].GetComponent<Enemy>()));
 
@@ -100,7 +121,6 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         enemy.spotPlayer = true;
-        enemy.chasingPlayer = true;
     }
 
     private void Flip()
