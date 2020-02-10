@@ -6,7 +6,8 @@ using UnityEngine;
     {
         STATE_PATROLLING,
         STATE_CHASING,
-        STATE_SEARCHING
+        STATE_SEARCHING,
+        STATE_RETURN
     };
 public class Enemy : MonoBehaviour
 {
@@ -39,11 +40,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] float sightViewRadius;
     PlayerController player;    
     private bool isFacingRight = false;
+    private Vector3 enemyInitPos;
 
     void Start()
     {
         currentState = State.STATE_PATROLLING;
         player = FindObjectOfType<PlayerController>();
+        enemyInitPos = new Vector3(transform.position.x, transform.position.y);
     }
 
     void Update()
@@ -59,7 +62,7 @@ public class Enemy : MonoBehaviour
                 if (spotPlayer)
                 {
                     currentState = State.STATE_CHASING;
-                } 
+                }
 
             break;
             case State.STATE_CHASING:
@@ -70,6 +73,12 @@ public class Enemy : MonoBehaviour
             case State.STATE_SEARCHING:
                 Debug.Log("Searching");
             break;
+
+            case State.STATE_RETURN:
+                Debug.Log("Stopped Chasing");
+                stopChasing();
+            break;
+
         }
     }
 
@@ -114,6 +123,26 @@ public class Enemy : MonoBehaviour
                 StartCoroutine(StartToChase(results[i].GetComponent<Enemy>()));
 
             }
+        }
+    }
+
+    void stopChasing()
+    {
+        float retreat = 2 * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, enemyInitPos, retreat);
+
+        if (enemyInitPos.x > transform.position.x && !isFacingRight)
+        {
+            Flip();
+        }
+        if (enemyInitPos.x < transform.position.x && isFacingRight)
+        {
+            Flip();
+        }
+
+        if (transform.position == enemyInitPos)
+        {
+            currentState = State.STATE_PATROLLING;
         }
     }
 
