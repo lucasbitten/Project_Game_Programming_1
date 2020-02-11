@@ -40,7 +40,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float sightViewRadius;
     PlayerController player;    
     private bool isFacingRight = false;
-    private Vector3 enemyInitPos;
+    private bool isSearching;
+    private Vector3 enemyInitPos, playerLastPos;
 
     void Start()
     {
@@ -72,11 +73,12 @@ public class Enemy : MonoBehaviour
             break;
             case State.STATE_SEARCHING:
                 Debug.Log("Searching");
+                searchPlayer();
             break;
 
             case State.STATE_RETURN:
-                Debug.Log("Stopped Chasing");
-                stopChasing();
+                Debug.Log("Returning");
+                returnToInitPos();
             break;
 
         }
@@ -126,10 +128,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void stopChasing()
+    void returnToInitPos()
     {
-        float retreat = 2 * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, enemyInitPos, retreat);
+        float retreatSpd = 2 * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, enemyInitPos, retreatSpd);
 
         if (enemyInitPos.x > transform.position.x && !isFacingRight)
         {
@@ -142,7 +144,38 @@ public class Enemy : MonoBehaviour
 
         if (transform.position == enemyInitPos)
         {
+            if (isFacingRight)
+            {
+                Flip();
+            }
             currentState = State.STATE_PATROLLING;
+            spotPlayer = false;
+        }
+    }
+
+    void searchPlayer()
+    {
+        if (!isSearching)
+        {
+            playerLastPos = new Vector3(player.transform.position.x, player.transform.position.y);
+            isSearching = true;
+        }
+        float searchSpd = 2.5f * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, playerLastPos, searchSpd);
+
+        if (playerLastPos.x > transform.position.x && !isFacingRight)
+        {
+            Flip();
+        }
+        if (playerLastPos.x < transform.position.x && isFacingRight)
+        {
+            Flip();
+        }
+
+        if (transform.position == playerLastPos)
+        {
+            currentState = State.STATE_RETURN;
+            isSearching = false;
         }
     }
 
