@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-    public enum State
-    {
-        STATE_PATROLLING,
-        STATE_CHASING,
-        STATE_SEARCHING,
-        STATE_RETURN
-    };
-public class Enemy : MonoBehaviour
+public enum State
+{
+    NO_STATE,
+    STATE_PATROLLING,
+    STATE_CHASING,
+    STATE_SEARCHING,
+    STATE_RETURNING
+};
+
+public abstract class Enemy : MonoBehaviour
 {
 
     public State currentState;
-
-
     private int health;
     private bool SpotPlayer;
     public bool spotPlayer
@@ -33,32 +33,31 @@ public class Enemy : MonoBehaviour
         }    
     }
 
-    [SerializeField] LayerMask enemies;
+    [SerializeField] bool canMoveVertically;
 
+    [SerializeField] LayerMask enemies;
 
     [SerializeField] float callEnemiesRadius;
     [SerializeField] float sightViewRadius;
     PlayerController player;    
-    private bool isFacingRight = false;
-    private bool isSearching;
-    private Vector3 enemyInitPos, playerLastPos;
+    protected bool isFacingRight = false;
+    private Vector3 enemyInitPos;
 
-    void Start()
+    protected virtual void Start()
     {
         currentState = State.STATE_PATROLLING;
         player = FindObjectOfType<PlayerController>();
         enemyInitPos = new Vector3(transform.position.x, transform.position.y);
     }
 
-    void Update()
+    protected virtual void CallStateMachine()
     {
-
         switch (currentState)
         {
 
             case State.STATE_PATROLLING:
 
-                Debug.Log("Patrolling");
+                PatrolMovement();
 
                 if (spotPlayer)
                 {
@@ -76,13 +75,15 @@ public class Enemy : MonoBehaviour
                 searchPlayer();
             break;
 
-            case State.STATE_RETURN:
-                Debug.Log("Returning");
-                returnToInitPos();
+            case State.STATE_RETURNING:
+                Debug.Log("Stopped Chasing");
+                StopChasing();
             break;
 
         }
     }
+
+
 
     bool PlayerOnRange()
     {
@@ -94,11 +95,27 @@ public class Enemy : MonoBehaviour
             return true;
         }
     }
-    void ChasePlayer()
+
+    protected virtual void PatrolMovement()
+    {
+
+    }
+
+    protected virtual void ChasePlayer()
     {
 
         float step = 3 * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step); 
+
+        if(canMoveVertically)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step); 
+        } else
+        {
+            Vector3 newPos = new Vector3(player.transform.position.x, transform.position.y, transform.position.y);
+
+            transform.position = Vector3.MoveTowards (transform.position, new Vector3(newPos.x,transform.position.y,transform.position.z), step);
+        }
+
 
         if (player.transform.position.x > transform.position.x && !isFacingRight)
         {
@@ -116,7 +133,6 @@ public class Enemy : MonoBehaviour
 
         Collider2D[] results;
         results = Physics2D.OverlapCircleAll(transform.position, callEnemiesRadius, enemies);
-        Debug.Log("Found " + results.Length + " enemies");
 
         for (int i = 0; i < results.Length; i++)
         {
@@ -128,10 +144,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void returnToInitPos()
+    protected virtual void StopChasing()
     {
-        float retreatSpd = 2 * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, enemyInitPos, retreatSpd);
+        float retreat = 2 * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, enemyInitPos, retreat);
 
         if (enemyInitPos.x > transform.position.x && !isFacingRight)
         {
@@ -144,25 +160,20 @@ public class Enemy : MonoBehaviour
 
         if (transform.position == enemyInitPos)
         {
-            if (isFacingRight)
-            {
-                Flip();
-            }
             currentState = State.STATE_PATROLLING;
-            spotPlayer = false;
         }
     }
 
-    void searchPlayer()
-    {
-        if (!isSearching)
-        {
-            playerLastPos = new Vector3(player.transform.position.x, player.transform.position.y);
-            isSearching = true;
-        }
-        float searchSpd = 2.5f * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, playerLastPos, searchSpd);
-
+    void searchPlayer()
+    {
+        if (!isSearching)
+        {
+            playerLastPos = new Vector3(player.transform.position.x, player.transform.position.y);
+            isSearching = true;
+        }
+        float searchSpd = 2.5f * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, playerLastPos, searchSpd);
+
         if (playerLastPos.x > transform.position.x && !isFacingRight)
         {
             Flip();
@@ -170,13 +181,13 @@ public class Enemy : MonoBehaviour
         if (playerLastPos.x < transform.position.x && isFacingRight)
         {
             Flip();
-        }
-
-        if (transform.position == playerLastPos)
-        {
-            currentState = State.STATE_RETURN;
-            isSearching = false;
-        }
+        }
+
+        if (transform.position == playerLastPos)
+        {
+            currentState = State.STATE_RETURN;
+            isSearching = false;
+        }
     }
 
     IEnumerator StartToChase(Enemy enemy)
@@ -185,7 +196,7 @@ public class Enemy : MonoBehaviour
         enemy.spotPlayer = true;
     }
 
-    private void Flip()
+    protected void Flip()
     {
         Vector3 temp = transform.localScale;
         temp.x *= -1;
