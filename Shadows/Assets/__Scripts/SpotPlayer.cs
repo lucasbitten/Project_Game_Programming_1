@@ -46,13 +46,13 @@ public class SpotPlayer : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject == player.gameObject ){
-            spotSign.SetActive(false);
-            enemy.spotPlayer = false;
-            enemy.currentState = State.STATE_RETURN;  //Enemies will return to their initial position
-        }
-    }
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     if (other.gameObject == player.gameObject ){
+    //         spotSign.SetActive(false);
+    //         enemy.spotPlayer = false;
+    //         enemy.currentState = State.STATE_RETURNING;  //Enemies will return to their initial position
+    //     }
+    // }
 
 }
