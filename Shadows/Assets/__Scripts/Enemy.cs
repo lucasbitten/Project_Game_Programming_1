@@ -42,6 +42,8 @@ public abstract class Enemy : MonoBehaviour
     PlayerController player;    
     protected bool isFacingRight = false;
     private Vector3 enemyInitPos;
+    private bool isSearching;
+    private Vector3 playerLastPos;
 
     protected virtual void Start()
     {
@@ -185,7 +187,7 @@ public abstract class Enemy : MonoBehaviour
 
         if (transform.position == playerLastPos)
         {
-            currentState = State.STATE_RETURN;
+            currentState = State.STATE_RETURNING;
             isSearching = false;
         }
     }

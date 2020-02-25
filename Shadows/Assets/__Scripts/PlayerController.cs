@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.15f;
     
     private Rigidbody2D player;
+    private Animator anim;
     public Transform[] shadowPoints;
 
     public bool isGrounded;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -56,15 +58,19 @@ public class PlayerController : MonoBehaviour
 
         player.velocity = new Vector2(horizontalMovement * speed, player.velocity.y);
 
-        if (isFacingRight && player.velocity.x < 0)
+        if (isFacingRight && player.velocity.x > 0)
         {
             Flip();
         }
-        else if (!isFacingRight && player.velocity.x > 0)
+        else if (!isFacingRight && player.velocity.x < 0)
         {
             Flip();
         }
         // Animations sections
+        anim.SetFloat("xSpeed", Mathf.Abs(player.velocity.x));
+
+        anim.SetFloat("ySpeed", player.velocity.y);
+        anim.SetBool("isGrounded", isGrounded);
     }
 
     private bool CheckGround()
