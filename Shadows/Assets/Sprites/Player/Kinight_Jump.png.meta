@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: 5387d181e3456594fa56e591ddf0412c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7876210918124769003
+    second: Kinight_Jump_0
+  - first:
+      213: 9028956132550348031
+    second: Kinight_Jump_1
+  - first:
+      213: -2253325668083313598
+    second: Kinight_Jump_2
+  - first:
+      213: -6429027509701153695
+    second: Kinight_Jump_3
+  - first:
+      213: -6309934591911339155
+    second: Kinight_Jump_4
+  - first:
+      213: -4755076894017283595
+    second: Kinight_Jump_5
+  - first:
+      213: 6841841226112853628
+    second: Kinight_Jump_6
+  - first:
+      213: -4755393554472646834
+    second: Kinight_Jump_7
+  - first:
+      213: 7894245412676593854
+    second: Kinight_Jump_8
+  - first:
+      213: -7984778168383853917
+    second: Kinight_Jump_9
+  - first:
+      213: -977192975599467413
+    second: Kinight_Jump_10
+  - first:
+      213: -4541360419509104060
+    second: Kinight_Jump_11
+  - first:
+      213: 5095369222126767495
+    second: Kinight_Jump_12
+  - first:
+      213: 8285064359627852219
+    second: Kinight_Jump_13
+  - first:
+      213: -4862270744860510491
+    second: Kinight_Jump_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kinight_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0478c48212025bb45bf3f108a65eb351
+      internalID: 7876210918124769003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f46dc8bfeea1e46a55dc23cf3b9aba
+      internalID: 9028956132550348031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 78
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456a3a795d37a9d45807ab714d96f1b0
+      internalID: -2253325668083313598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 0
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706945296a4a3e749903e86ef4b0d211
+      internalID: -6429027509701153695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 0
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1356d7fba79c947a0945aa59a423eb
+      internalID: -6309934591911339155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 0
+        width: 72
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74993258e5e2f8c488f094e0d17c60e5
+      internalID: -4755076894017283595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 0
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebaee19a4815484a9229dccee0bcd49
+      internalID: -4755393554472646834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 0
+        width: 81
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6b0f28d0bb6884e8e293231ff878b1
+      internalID: 7894245412676593854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 0
+        width: 75
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60495c153fb2c443925f6d43c8577b3
+      internalID: -7984778168383853917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 0
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9040d8ea291c6b34a9a2c4c9120c43f9
+      internalID: -977192975599467413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 0
+        width: 67
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814835f98c90c4d42a7b5739bbcf77a0
+      internalID: -4541360419509104060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_12
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 0
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe424477fecf3b4dacaeb08518e8faa
+      internalID: 5095369222126767495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 0
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fed67ed697d69a4a9a5b2301817d656
+      internalID: 8285064359627852219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kinight_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 0
+        width: 69
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0027438bdc254f2419a651f636ce9af0
+      internalID: -4862270744860510491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
