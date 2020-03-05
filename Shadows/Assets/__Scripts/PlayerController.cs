@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -56,6 +57,8 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
+
+
         player.velocity = new Vector2(horizontalMovement * speed, player.velocity.y);
 
         if (isFacingRight && player.velocity.x > 0)
@@ -85,5 +88,13 @@ public class PlayerController : MonoBehaviour
         transform.localScale = temp;
 
         isFacingRight = !isFacingRight;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Touched the enemy");
+        }
     }
 }
