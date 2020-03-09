@@ -8,40 +8,39 @@ public class EnemyStateController : MonoBehaviour
     public EnemyStats stats;
 
     [Header("State Information")]
-    // Current State
-    public States currentStates;
-    // Dummy State
-    public States sameStates;
+    //Current State
+    public State currentState;
+    //Dummy state (to represent the same state)
+    public State sameState;
 
-    //[Header("Move Information")]
-
+    // [Header("Movement Information")]
 
 
     [HideInInspector] public EnemyMovementController enemyMovementController;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         enemyMovementController = GetComponent<EnemyMovementController>();
-        currentStates.InitState(this);
+        currentState.InitState(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        currentStates.UpdateState(this);
+        currentState.UpdateState(this);   
     }
 
-    // Transition the state machine to a new state
-    public void TransitionToState(States nextState)
+    //Transitions the state machine to a new state
+    public void TransitionToState(State nextState)
     {
-        if (nextState != sameStates)
+        if(nextState != sameState)
         {
-            // Transition to a new state
-            currentStates = nextState;
+            // Transition to a new state!
+            currentState = nextState;
 
             // Initialize new state
-            currentStates.InitState(this);
+            currentState.InitState(this);
         }
     }
+
 }

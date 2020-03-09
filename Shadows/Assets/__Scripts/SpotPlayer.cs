@@ -23,7 +23,7 @@ public class SpotPlayer : MonoBehaviour
                 spotSign.GetComponent<SpriteRenderer>().sprite = exclamation;
                 spotSign.SetActive(true);
                 enemy.spotPlayer = true;
-                enemy.currentState = State.STATE_CHASING;
+                enemy.currentState = States.STATE_CHASING;
             }
         }
     }
@@ -35,7 +35,7 @@ public class SpotPlayer : MonoBehaviour
                 spotSign.SetActive(true);
                 spotSign.GetComponent<SpriteRenderer>().sprite = exclamation;
                 enemy.spotPlayer = true;
-                enemy.currentState = State.STATE_CHASING;
+                enemy.currentState = States.STATE_CHASING;
 
             } 
             // else{

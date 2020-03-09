@@ -7,11 +7,14 @@ public class EnemyMovementController : MonoBehaviour
     [Header("Enemy Movement Info")]
     public List<Transform> waypoints;
     public int nextWaypoint = 1;
+    public Transform eyes;
+    public LayerMask playerLayer;
 
     private Animator animator;
     private Rigidbody2D rBody;
     private bool isRight = true;
     private Vector2 forwardVector;
+    [HideInInspector] public Transform chaseTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,7 @@ public class EnemyMovementController : MonoBehaviour
     void Update()
     {
         // Check orientation of the enemy
-        if (rBody.velocity.x > 0 && !isRight)
+        if(rBody.velocity.x > 0 && !isRight)
         {
             Flip();
         }
@@ -54,4 +57,5 @@ public class EnemyMovementController : MonoBehaviour
         temp.x *= -1;
         transform.localScale = temp;
     }
+
 }

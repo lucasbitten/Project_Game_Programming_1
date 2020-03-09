@@ -2,14 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10.0f;
+    [SerializeField] private float speed;
     [SerializeField] private float jumpForce = 500.0f;
     [SerializeField] private Transform groundCheckPos;
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private float groundCheckRadius = 0.15f;
+    [SerializeField] private float runSpeed = 8.00f;
+    [SerializeField] private float walkSpeed = 5.0f;
     
     private Rigidbody2D player;
     private Animator anim;
@@ -35,8 +38,15 @@ public class PlayerController : MonoBehaviour
         }else{
             visible = false;
         }
-
-
+        Debug.Log($"speed => {speed}");
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = runSpeed;
+        }
+        else
+        {
+            speed = walkSpeed;
+        }
     }
 
     void FixedUpdate()
@@ -56,8 +66,6 @@ public class PlayerController : MonoBehaviour
             player.AddForce(new Vector2(0.0f, jumpForce));
             isGrounded = false;
         }
-
-
 
         player.velocity = new Vector2(horizontalMovement * speed, player.velocity.y);
 

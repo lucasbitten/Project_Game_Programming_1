@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-
-public class Transition
+public class Transition 
 {
     public Decision decision;
-    public States trueStates;
-    public States falseStates;
+    public State trueState;
+    public State falseState;
 }
