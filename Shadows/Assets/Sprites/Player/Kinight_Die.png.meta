@@ -47,6 +47,51 @@ TextureImporter:
   - first:
       213: -4960577434013758779
     second: Kinight_Die_14
+  - first:
+      213: 284509695254336284
+    second: Kinight_Die_0
+  - first:
+      213: -6736177682328322370
+    second: Kinight_Die_1
+  - first:
+      213: -6134983448213487999
+    second: Kinight_Die_2
+  - first:
+      213: -3495738889588736905
+    second: Kinight_Die_3
+  - first:
+      213: -1192341467007809425
+    second: Kinight_Die_4
+  - first:
+      213: -7115740411095590542
+    second: Kinight_Die_5
+  - first:
+      213: 131834911460976345
+    second: Kinight_Die_6
+  - first:
+      213: 6850868651375912887
+    second: Kinight_Die_7
+  - first:
+      213: -7684209763445299516
+    second: Kinight_Die_8
+  - first:
+      213: -7240722489032541339
+    second: Kinight_Die_9
+  - first:
+      213: 8594176631834526210
+    second: Kinight_Die_10
+  - first:
+      213: 2957097149219341924
+    second: Kinight_Die_11
+  - first:
+      213: 397828903333847469
+    second: Kinight_Die_12
+  - first:
+      213: 7448133158549048251
+    second: Kinight_Die_13
+  - first:
+      213: -7757980047820867269
+    second: Kinight_Die_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -146,10 +191,10 @@ TextureImporter:
       name: Kinight_Die_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 64
+        x: 39
+        y: 20
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05164a055b33f6a49814b318dda1134a
-      internalID: -4409431596278448391
+      spriteID: c131ac87f08c2f300800000000000000
+      internalID: 284509695254336284
       vertices: []
       indices: 
       edges: []
@@ -167,10 +212,10 @@ TextureImporter:
       name: Kinight_Die_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 96
-        height: 64
+        x: 135
+        y: 20
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98f28179e7a8d2c48a4c24a714d10c0f
-      internalID: 6116842189198119964
+      spriteID: ebef7e4761a4482a0800000000000000
+      internalID: -6736177682328322370
       vertices: []
       indices: 
       edges: []
@@ -188,10 +233,10 @@ TextureImporter:
       name: Kinight_Die_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 96
-        height: 64
+        x: 231
+        y: 20
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3a0df4542338464faeef7d6111b8579
-      internalID: 996614797118136973
+      spriteID: 18e7552fe092cdaa0800000000000000
+      internalID: -6134983448213487999
       vertices: []
       indices: 
       edges: []
@@ -209,10 +254,10 @@ TextureImporter:
       name: Kinight_Die_3
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
-        width: 96
-        height: 64
+        x: 327
+        y: 20
+        width: 24
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfbae4e4cf5756d4a974ce2407094353
-      internalID: -5454070231337937218
+      spriteID: 77c7b8a4004ac7fc0800000000000000
+      internalID: -3495738889588736905
       vertices: []
       indices: 
       edges: []
@@ -230,10 +275,10 @@ TextureImporter:
       name: Kinight_Die_4
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 64
+        x: 423
+        y: 20
+        width: 27
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,8 +286,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cc3754a06d35244d804fad5cf7a0779
-      internalID: 1837380378763334980
+      spriteID: f680808c0c3f37fe0800000000000000
+      internalID: -1192341467007809425
       vertices: []
       indices: 
       edges: []
@@ -251,10 +296,10 @@ TextureImporter:
       name: Kinight_Die_5
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 96
-        height: 64
+        x: 518
+        y: 20
+        width: 28
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,8 +307,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec1450951487a914fbf5861d8cd1a249
-      internalID: -3748602501487327607
+      spriteID: 27951c20ccfcf3d90800000000000000
+      internalID: -7115740411095590542
       vertices: []
       indices: 
       edges: []
@@ -272,10 +317,10 @@ TextureImporter:
       name: Kinight_Die_6
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
-        width: 96
-        height: 64
+        x: 614
+        y: 20
+        width: 28
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,8 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6a722e78ce1a0844b421d4b85e46a2c
-      internalID: -2238985713889083123
+      spriteID: 9d660aa472f54d100800000000000000
+      internalID: 131834911460976345
       vertices: []
       indices: 
       edges: []
@@ -293,10 +338,10 @@ TextureImporter:
       name: Kinight_Die_7
       rect:
         serializedVersion: 2
-        x: 672
-        y: 0
-        width: 96
-        height: 64
+        x: 710
+        y: 20
+        width: 28
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,8 +349,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf9391b35f68c6a4b9ab426088d4f425
-      internalID: 2441185747803959268
+      spriteID: 7b7ee10bdbc231f50800000000000000
+      internalID: 6850868651375912887
       vertices: []
       indices: 
       edges: []
@@ -314,10 +359,10 @@ TextureImporter:
       name: Kinight_Die_8
       rect:
         serializedVersion: 2
-        x: 768
-        y: 0
-        width: 96
-        height: 64
+        x: 806
+        y: 20
+        width: 28
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,8 +370,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 525b5749686fcdc47a78f0599860a8a7
-      internalID: 2348675352987747394
+      spriteID: 4c6214ecee33c5590800000000000000
+      internalID: -7684209763445299516
       vertices: []
       indices: 
       edges: []
@@ -335,10 +380,10 @@ TextureImporter:
       name: Kinight_Die_9
       rect:
         serializedVersion: 2
-        x: 864
-        y: 0
-        width: 96
-        height: 64
+        x: 902
+        y: 20
+        width: 28
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -346,8 +391,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d93c1c7b5ffd404da87f65945bda362
-      internalID: -605721063964791443
+      spriteID: 56b780c5249c38b90800000000000000
+      internalID: -7240722489032541339
       vertices: []
       indices: 
       edges: []
@@ -356,10 +401,10 @@ TextureImporter:
       name: Kinight_Die_10
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
-        width: 96
-        height: 64
+        x: 997
+        y: 20
+        width: 29
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,8 +412,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e098c431650f3d540905dd7f97abd137
-      internalID: 537742801579612093
+      spriteID: 202c57ddc16a44770800000000000000
+      internalID: 8594176631834526210
       vertices: []
       indices: 
       edges: []
@@ -377,10 +422,10 @@ TextureImporter:
       name: Kinight_Die_11
       rect:
         serializedVersion: 2
-        x: 1056
-        y: 0
-        width: 96
-        height: 64
+        x: 1094
+        y: 20
+        width: 28
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,8 +433,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f4a7b6cdb107a1429f9a550ea659476
-      internalID: 8783046783834602690
+      spriteID: 4660a899038b90920800000000000000
+      internalID: 2957097149219341924
       vertices: []
       indices: 
       edges: []
@@ -398,10 +443,10 @@ TextureImporter:
       name: Kinight_Die_12
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 96
-        height: 64
+        x: 1190
+        y: 20
+        width: 28
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,8 +454,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94f98032b9237d64e99ac36b5a84fa52
-      internalID: -1835910720730153941
+      spriteID: da1e890a74f558500800000000000000
+      internalID: 397828903333847469
       vertices: []
       indices: 
       edges: []
@@ -419,10 +464,10 @@ TextureImporter:
       name: Kinight_Die_13
       rect:
         serializedVersion: 2
-        x: 1248
-        y: 0
-        width: 96
-        height: 64
+        x: 1286
+        y: 20
+        width: 28
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,8 +475,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12727319e01e4f94791f061ccf293150
-      internalID: -4549225349017036740
+      spriteID: bbbcf1355a51d5760800000000000000
+      internalID: 7448133158549048251
       vertices: []
       indices: 
       edges: []
@@ -440,10 +485,10 @@ TextureImporter:
       name: Kinight_Die_14
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 0
-        width: 96
-        height: 64
+        x: 1382
+        y: 20
+        width: 28
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,8 +496,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b021bdb3159c4b246b125157e190fa75
-      internalID: -4960577434013758779
+      spriteID: b39b113004e165490800000000000000
+      internalID: -7757980047820867269
       vertices: []
       indices: 
       edges: []

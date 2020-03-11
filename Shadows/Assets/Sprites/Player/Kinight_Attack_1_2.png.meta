@@ -38,6 +38,42 @@ TextureImporter:
   - first:
       213: 3706321979257393733
     second: Kinight_Attack_1_2_11
+  - first:
+      213: -950435680782676052
+    second: Kinight_Attack_1_2_0
+  - first:
+      213: -6939915430936921428
+    second: Kinight_Attack_1_2_1
+  - first:
+      213: 3845705558837787541
+    second: Kinight_Attack_1_2_2
+  - first:
+      213: -6050576854051999293
+    second: Kinight_Attack_1_2_3
+  - first:
+      213: -7328180223441254930
+    second: Kinight_Attack_1_2_4
+  - first:
+      213: -3527310543597321554
+    second: Kinight_Attack_1_2_5
+  - first:
+      213: -9201568446145599572
+    second: Kinight_Attack_1_2_6
+  - first:
+      213: -7336835779177430633
+    second: Kinight_Attack_1_2_7
+  - first:
+      213: 531788423224935839
+    second: Kinight_Attack_1_2_8
+  - first:
+      213: 3410254124631318549
+    second: Kinight_Attack_1_2_9
+  - first:
+      213: -1458431223032461340
+    second: Kinight_Attack_1_2_10
+  - first:
+      213: 4997249239789021770
+    second: Kinight_Attack_1_2_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -137,10 +173,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 54
+        y: 20
+        width: 48
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2278ee733cbf28b49b6ffec630a7f78c
-      internalID: 6890266819610656650
+      spriteID: caf8711b8cf5fc2f0800000000000000
+      internalID: -950435680782676052
       vertices: []
       indices: 
       edges: []
@@ -158,10 +194,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 206
+        y: 20
+        width: 39
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d856b6b494910b498426750f5e07393
-      internalID: -4338367294436223912
+      spriteID: caab0cf4fa770bf90800000000000000
+      internalID: -6939915430936921428
       vertices: []
       indices: 
       edges: []
@@ -179,10 +215,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_2
       rect:
         serializedVersion: 2
-        x: 288
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 350
+        y: 20
+        width: 39
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6688adb2f7cf828418f1f277c1cb0f65
-      internalID: -1898167987044248978
+      spriteID: 59b754194d0be5530800000000000000
+      internalID: 3845705558837787541
       vertices: []
       indices: 
       edges: []
@@ -200,10 +236,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_3
       rect:
         serializedVersion: 2
-        x: 432
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 498
+        y: 20
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 594c47a0d8f6a234a8bae4b6a612c473
-      internalID: 187373366712584979
+      spriteID: 3c1b7089868080ca0800000000000000
+      internalID: -6050576854051999293
       vertices: []
       indices: 
       edges: []
@@ -221,10 +257,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_4
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 649
+        y: 20
+        width: 27
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f669577f4f49c504085b5c328cf4cc8d
-      internalID: -5256510937234638069
+      spriteID: ee5cdb3c9e21d4a90800000000000000
+      internalID: -7328180223441254930
       vertices: []
       indices: 
       edges: []
@@ -242,10 +278,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_5
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 793
+        y: 20
+        width: 21
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,8 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f12c921fa694cc349a49723ba721a159
-      internalID: -7926086331660537773
+      spriteID: ea24464cfb97c0fc0800000000000000
+      internalID: -3527310543597321554
       vertices: []
       indices: 
       edges: []
@@ -263,10 +299,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_6
       rect:
         serializedVersion: 2
-        x: 864
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 942
+        y: 20
+        width: 18
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,8 +310,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f2d54fb23fc0d24798cf36782b0997b
-      internalID: -4283586357804828764
+      spriteID: ca76c0f00467d4080800000000000000
+      internalID: -9201568446145599572
       vertices: []
       indices: 
       edges: []
@@ -284,10 +320,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_7
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 1098
+        y: 20
+        width: 51
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -295,8 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a2731e581bc803448811217a0cb7177
-      internalID: 7107810684175930903
+      spriteID: 791c0c62bb25e2a90800000000000000
+      internalID: -7336835779177430633
       vertices: []
       indices: 
       edges: []
@@ -305,10 +341,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_8
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 1242
+        y: 20
+        width: 40
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,8 +352,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ada78e3fc8e442544b8ca26c1a0a2d89
-      internalID: -7720146213799930675
+      spriteID: f95ccfdd0ca416700800000000000000
+      internalID: 531788423224935839
       vertices: []
       indices: 
       edges: []
@@ -326,10 +362,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_9
       rect:
         serializedVersion: 2
-        x: 1296
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 1386
+        y: 20
+        width: 22
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,8 +373,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 969e4ff246cb5654eb025393e1bff305
-      internalID: 1860914870887967332
+      spriteID: 510e57cde08a35f20800000000000000
+      internalID: 3410254124631318549
       vertices: []
       indices: 
       edges: []
@@ -347,10 +383,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_10
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 1530
+        y: 20
+        width: 22
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,8 +394,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e92fd94fcd75ac4ab04eec20974d899
-      internalID: 3117872533051733153
+      spriteID: 4e7cfcd978c92cbe0800000000000000
+      internalID: -1458431223032461340
       vertices: []
       indices: 
       edges: []
@@ -368,10 +404,10 @@ TextureImporter:
       name: Kinight_Attack_1_2_11
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 0
-        width: 144.58333
-        height: 64
+        x: 1674
+        y: 20
+        width: 22
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,8 +415,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc52937f57030204f95655b98cfa258a
-      internalID: 3706321979257393733
+      spriteID: a4a27bff4bbc95540800000000000000
+      internalID: 4997249239789021770
       vertices: []
       indices: 
       edges: []

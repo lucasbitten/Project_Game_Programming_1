@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813651607000b474397d7e837feba015, type: 3}
   m_Name: PatrolAction
   m_EditorClassIdentifier: 
-  patrolSpeed: 5
+  patrolSpeed: 2

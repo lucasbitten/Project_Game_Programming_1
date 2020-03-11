@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float walkSpeed = 5.0f;
     
     private Rigidbody2D player;
-    private Animator anim;
+    [SerializeField] Animator anim;
     public Transform[] shadowPoints;
 
     public bool isGrounded;
@@ -24,10 +24,12 @@ public class PlayerController : MonoBehaviour
     public List<GameObject> lights = new List<GameObject>();
     public bool visible;
 
+    private float horizontalMovement;
+    private bool jumping;
+
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,24 @@ public class PlayerController : MonoBehaviour
         {
             speed = walkSpeed;
         }
+
+
+        horizontalMovement = Input.GetAxis("Horizontal");
+        if (isGrounded && Input.GetAxis("Jump") > 0)
+        {
+            jumping = true;
+        }
+        else
+        {
+            jumping = false;
+        }
+
+        if (Input.GetAxis("Fire1") > 0)
+        {
+            anim.SetTrigger("Attacking");
+
+        }
+
     }
 
     void FixedUpdate()
@@ -57,15 +77,17 @@ public class PlayerController : MonoBehaviour
         // player.velocity = new Vector2(moveHorizontal, moveVertical);
 
         Vector2 movement = Vector2.zero;
-        float horizontalMovement = Input.GetAxis("Horizontal");
 
-        isGrounded = (CheckGround() && player.velocity.y < 0.1f);
 
-        if (isGrounded && Input.GetAxis("Jump") > 0)
+        if ( jumping)
         {
             player.AddForce(new Vector2(0.0f, jumpForce));
             isGrounded = false;
         }
+
+        isGrounded = (CheckGround() && player.velocity.y < 0.1f);
+
+
 
         player.velocity = new Vector2(horizontalMovement * speed, player.velocity.y);
 
