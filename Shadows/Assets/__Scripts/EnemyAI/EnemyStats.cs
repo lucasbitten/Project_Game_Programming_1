@@ -22,10 +22,9 @@ public class EnemyStats : ScriptableObject
     public float chaseRange = 5;
 
     [Header("State - ATTACK")]
-    public float attackRange = 0.1f;
+    public float attackRange = 0.5f;
     public float attackRate = 1;
-    public float attackDamage = 10;
-
+    public int attackDamage = 1;
 
     // Health Information
     [Header("Healt Information")]

@@ -19,6 +19,7 @@ public class EnemyStateController : MonoBehaviour
 
     [SerializeField] Animator anim;
 
+    public float nextAttack = 0f;
     void Start()
     {
         enemyMovementController = GetComponent<EnemyMovementController>();

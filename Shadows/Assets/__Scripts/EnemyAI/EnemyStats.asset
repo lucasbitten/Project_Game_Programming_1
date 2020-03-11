@@ -16,6 +16,8 @@ MonoBehaviour:
   patrolSpeed: 1
   chaseSpeed: 5
   chaseRange: 5
-  attackRange: 0.1
+  attackRange: 0.5
   attackRate: 1
-  attackDamage: 10
+  attackDamage: 1
+  maxHealth: 3
+  currentHealth: 3

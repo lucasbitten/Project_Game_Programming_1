@@ -18,16 +18,12 @@ public class PlayerAttack : MonoBehaviour
 
         if(Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            if (Input.GetAxis("Fire1") > 0.1f)
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
         }
-
-
-
- 
 
     }
 

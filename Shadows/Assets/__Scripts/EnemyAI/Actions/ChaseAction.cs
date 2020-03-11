@@ -17,7 +17,7 @@ public class ChaseAction : Action
         Vector2 chaseVector = Vector2.MoveTowards(
             controller.transform.position,
             controller.enemyMovementController.chaseTarget.position,
-            0.05f);
+            0.01f);
 
         controller.transform.position = new Vector3(
             chaseVector.x, 

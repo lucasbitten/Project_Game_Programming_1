@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.15f;
     [SerializeField] private float runSpeed = 8.00f;
     [SerializeField] private float walkSpeed = 5.0f;
+    [SerializeField] private int currentHealth = 5;
     
     private Rigidbody2D player;
     [SerializeField] Animator anim;
@@ -122,5 +123,26 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Touched the enemy");
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+
+        anim.SetTrigger("isHurt");
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    
+    void Die()
+    {
+        anim.SetBool("isDead", true);
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        Destroy(gameObject, 2);
+        this.enabled = false;
     }
 }

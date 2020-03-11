@@ -11,7 +11,7 @@ public class ChaseToAttackDecision : Decision
         RaycastHit2D hit = Physics2D.Raycast(
             controller.enemyMovementController.eyes.position,
             controller.enemyMovementController.eyes.TransformDirection(Vector3.right),
-            1.0f,
+            0.5f,
             controller.enemyMovementController.playerLayer
             );
 

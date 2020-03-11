@@ -9,8 +9,9 @@ public class EnemyMovementController : MonoBehaviour
     public int nextWaypoint = 1;
     public Transform eyes;
     public LayerMask playerLayer;
+    public Transform attackPoint;
 
-    private Animator animator;
+    public Animator animator;
     private Rigidbody2D rBody;
     private bool isRight = true;
     private Vector2 forwardVector;
@@ -19,7 +20,6 @@ public class EnemyMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
         rBody = GetComponent<Rigidbody2D>();
     }
 
@@ -35,6 +35,8 @@ public class EnemyMovementController : MonoBehaviour
         {
             Flip();
         }
+
+
 
         // Set parameters in the animator
 
