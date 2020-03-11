@@ -14,15 +14,17 @@ public class EnemyStateController : MonoBehaviour
     public State sameState;
 
     // [Header("Movement Information")]
-
-
     [HideInInspector] public EnemyMovementController enemyMovementController;
 
+
+    [SerializeField] Animator anim;
 
     void Start()
     {
         enemyMovementController = GetComponent<EnemyMovementController>();
         currentState.InitState(this);
+        stats.currentHealth = stats.maxHealth;
+
     }
 
     void Update()
@@ -41,6 +43,26 @@ public class EnemyStateController : MonoBehaviour
             // Initialize new state
             currentState.InitState(this);
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        anim.SetTrigger("Hurt");
+        stats.currentHealth -= damage;
+
+        if(stats.currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        anim.SetBool("isDead", true);
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        Destroy(gameObject,2);
+        this.enabled = false;
     }
 
 }

@@ -61,11 +61,7 @@ public class PlayerController : MonoBehaviour
             jumping = false;
         }
 
-        if (Input.GetAxis("Fire1") > 0)
-        {
-            anim.SetTrigger("Attacking");
 
-        }
 
     }
 

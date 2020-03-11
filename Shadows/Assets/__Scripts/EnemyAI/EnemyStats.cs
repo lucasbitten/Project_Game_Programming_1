@@ -28,6 +28,9 @@ public class EnemyStats : ScriptableObject
 
 
     // Health Information
+    [Header("Healt Information")]
+    public int maxHealth = 3;
+    public int currentHealth;
 
     // Audio Information
 

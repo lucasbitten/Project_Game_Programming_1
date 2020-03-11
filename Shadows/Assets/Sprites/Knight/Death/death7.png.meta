@@ -1,7 +1,67 @@
 fileFormatVersion: 2
 guid: 2a5fdedd1b90a0348a46f2df1891ca9b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3659456097548069711
+    second: death7_0
+  - first:
+      213: -469333998385491601
+    second: death7_1
+  - first:
+      213: 2750471084170696186
+    second: death7_2
+  - first:
+      213: -3425614171454735997
+    second: death7_3
+  - first:
+      213: -2523389168138902476
+    second: death7_4
+  - first:
+      213: 5680214877458867550
+    second: death7_5
+  - first:
+      213: 2422675791633240143
+    second: death7_6
+  - first:
+      213: -1500268600546195703
+    second: death7_7
+  - first:
+      213: -3359038699727046518
+    second: death7_8
+  - first:
+      213: -6460882244331629880
+    second: death7_9
+  - first:
+      213: -1522220563722743212
+    second: death7_10
+  - first:
+      213: -6971628069358713441
+    second: death7_11
+  - first:
+      213: -3766285238818443776
+    second: death7_12
+  - first:
+      213: -5245242864484572558
+    second: death7_13
+  - first:
+      213: -6020742207935693849
+    second: death7_14
+  - first:
+      213: -3773376214395732188
+    second: death7_15
+  - first:
+      213: -1374934040604429831
+    second: death7_16
+  - first:
+      213: 8822857116253046329
+    second: death7_17
+  - first:
+      213: 943943640668846615
+    second: death7_18
+  - first:
+      213: 3016607083858533780
+    second: death7_19
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +100,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +130,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: death7_9
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 96
+        width: 104
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c21cfa74d55656a0800000000000000
+      internalID: -6460882244331629880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,70 @@
 fileFormatVersion: 2
 guid: caca9fa0c71d0cf42bda5cf4e630b1c4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2809570420658152914
+    second: death8_0
+  - first:
+      213: -6383214832754120922
+    second: death8_1
+  - first:
+      213: -3371892098658840180
+    second: death8_2
+  - first:
+      213: 6567475083514829690
+    second: death8_3
+  - first:
+      213: 4134465951230977018
+    second: death8_4
+  - first:
+      213: 7505351152866088793
+    second: death8_5
+  - first:
+      213: -9117270409151394753
+    second: death8_6
+  - first:
+      213: -4229093991990765253
+    second: death8_7
+  - first:
+      213: -8620745288789666988
+    second: death8_8
+  - first:
+      213: -8091655023908108404
+    second: death8_9
+  - first:
+      213: 5562076748187888624
+    second: death8_10
+  - first:
+      213: -8365785221264656885
+    second: death8_11
+  - first:
+      213: -3895604376154993160
+    second: death8_12
+  - first:
+      213: -6972783560782621646
+    second: death8_13
+  - first:
+      213: 1406009215587342737
+    second: death8_14
+  - first:
+      213: 6941602324741324357
+    second: death8_15
+  - first:
+      213: 3373564918021366810
+    second: death8_16
+  - first:
+      213: -149919552395068940
+    second: death8_17
+  - first:
+      213: 7017999061761511667
+    second: death8_18
+  - first:
+      213: -5991444912448907040
+    second: death8_19
+  - first:
+      213: 6355756480242546132
+    second: death8_20
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +103,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +133,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: death8_20
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 91
+        width: 115
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d57eb338de243850800000000000000
+      internalID: 6355756480242546132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
