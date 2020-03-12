@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         }else{
             visible = false;
         }
-        Debug.Log($"speed => {speed}");
+        //Debug.Log($"speed => {speed}");
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = runSpeed;

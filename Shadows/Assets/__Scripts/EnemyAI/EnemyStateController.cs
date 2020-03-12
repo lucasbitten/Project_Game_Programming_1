@@ -61,6 +61,7 @@ public class EnemyStateController : MonoBehaviour
     {
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Rigidbody2D>().gravityScale = 0;
         Destroy(gameObject,2);
         this.enabled = false;

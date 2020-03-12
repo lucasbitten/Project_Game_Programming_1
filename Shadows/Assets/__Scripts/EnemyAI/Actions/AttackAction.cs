@@ -20,13 +20,10 @@ public class AttackAction : Action
     {
         Debug.Log("Attacking");
         controller.enemyMovementController.animator.SetTrigger("isAttaking");
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, stats.attackRange, playerLayer);
-
 
         if (Time.time >= controller.nextAttack)
         {
             controller.nextAttack = Time.time + 1f / stats.attackRate;
-            hitEnemies[0].GetComponent<PlayerController>().TakeDamage(stats.attackDamage);
         }
 
 
