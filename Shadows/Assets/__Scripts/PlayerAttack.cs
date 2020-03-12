@@ -18,11 +18,7 @@ public class PlayerAttack : MonoBehaviour
 
         if(Time.time >= nextAttackTime)
         {
-<<<<<<< Updated upstream
             if (Input.GetAxis("Fire1") > 0.1f)
-=======
-            if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.Mouse0))
->>>>>>> Stashed changes
             {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
