@@ -8,6 +8,9 @@ public class PatrolToChaseDecision : Decision
     public override bool Decide(EnemyStateController controller)
     {
 
+        if (!controller.player.visible)
+            return false;
+
         // Check if an object is in front of this object
         // Raycast
         RaycastHit2D hit = Physics2D.Raycast(

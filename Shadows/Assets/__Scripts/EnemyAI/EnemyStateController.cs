@@ -15,13 +15,16 @@ public class EnemyStateController : MonoBehaviour
 
     // [Header("Movement Information")]
     [HideInInspector] public EnemyMovementController enemyMovementController;
+    [HideInInspector] public float nextAttack = 0f;
+    [HideInInspector] public PlayerController player;
 
 
     [SerializeField] Animator anim;
 
-    public float nextAttack = 0f;
+    
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         enemyMovementController = GetComponent<EnemyMovementController>();
         currentState.InitState(this);
         stats.currentHealth = stats.maxHealth;
