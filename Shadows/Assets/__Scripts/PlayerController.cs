@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
@@ -61,8 +62,6 @@ public class PlayerController : MonoBehaviour
         {
             jumping = false;
         }
-
-
 
     }
 
@@ -134,6 +133,7 @@ public class PlayerController : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            StartCoroutine(Respawn());
         }
     }
     
@@ -142,7 +142,13 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().gravityScale = 0;
-        Destroy(gameObject, 2);
         this.enabled = false;
+    }
+
+    private static IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }

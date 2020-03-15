@@ -21,6 +21,9 @@ public class EnemyStats : ScriptableObject
     public float chaseSpeed = 5;
     public float chaseRange = 5;
 
+    [Header("State - SEARCH")] 
+    public float timeToSearch = 5;
+
     [Header("State - ATTACK")]
     public float attackRange = 0.5f;
     public float attackRate = 1;
