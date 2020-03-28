@@ -9,8 +9,11 @@ public class AttackAction : Action
     private Transform attackPoint;
     private EnemyStats stats;
     private LayerMask playerLayer;
+
     public override void Init(EnemyStateController controller)
     {
+        controller.enemyMovementController.sign.GetComponent<SpriteRenderer>().sprite = controller.enemyMovementController.exclamation;
+        controller.enemyMovementController.sign.SetActive(true);
         attackPoint = controller.enemyMovementController.attackPoint;
         stats = controller.stats;
         playerLayer = controller.enemyMovementController.playerLayer;

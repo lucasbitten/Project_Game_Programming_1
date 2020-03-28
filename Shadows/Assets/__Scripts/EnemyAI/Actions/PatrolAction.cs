@@ -11,6 +11,7 @@ public class PatrolAction : Action
 
     public override void Init(EnemyStateController controller)
     {
+        controller.enemyMovementController.sign.SetActive(false);
         currentTarget = controller.enemyMovementController.waypoints[0].position;
     }
     public override void Act(EnemyStateController controller)

@@ -22,15 +22,16 @@ public class ChaseToSearchDecision : Decision
         );
 
          // Check if enemy can see the player
-        if (hit && hit.collider.CompareTag("Player"))
+        if (!hit && !controller.player.visible)
         {
-            // Store the players position as a new chaseTarget
-            controller.enemyMovementController.chaseTarget = hit.transform;
-            return false;
+            // Store the players position as a new target
+            Debug.Log("Chase to Search true");
+            controller.enemyMovementController.chaseTarget = controller.player.transform;
+            return true;
         } 
         else
         {
-            return true;
+            return false;
         }
 
     }

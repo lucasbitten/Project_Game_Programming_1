@@ -17,9 +17,17 @@ public class EnemyMovementController : MonoBehaviour
     private Vector2 forwardVector;
     [HideInInspector] public Transform chaseTarget;
 
+    public Sprite exclamation;
+    public Sprite questionMark;
+    public GameObject sign;
+
+ 
+
+
     // Start is called before the first frame update
     void Start()
     {
+        sign.SetActive(false);
         rBody = GetComponent<Rigidbody2D>();
     }
 
@@ -39,7 +47,7 @@ public class EnemyMovementController : MonoBehaviour
 
 
         // Set parameters in the animator
-
+        animator.SetFloat("xSpeed", Mathf.Abs(rBody.velocity.x));
     }
 
     public void Move(Vector3 target, float speed)
@@ -49,15 +57,18 @@ public class EnemyMovementController : MonoBehaviour
 
         // Move towards my target
         // TODO: Add State speed
-        rBody.velocity = forwardVector * speed;
+        rBody.velocity = new Vector3(forwardVector.x, 0,0 )* speed;
     }
 
-    private void Flip()
+    public void Flip()
     {
         isRight = !isRight;
         Vector3 temp = transform.localScale;
         temp.x *= -1;
         transform.localScale = temp;
+
+        sign.transform.localScale = new Vector3(-sign.transform.localScale.x, sign.transform.localScale.y, sign.transform.localScale.z);
+
     }
 
 }

@@ -17,9 +17,10 @@ public class EnemyStateController : MonoBehaviour
     [HideInInspector] public EnemyMovementController enemyMovementController;
     [HideInInspector] public float nextAttack = 0f;
     [HideInInspector] public PlayerController player;
-
+    [HideInInspector] public bool attacking;
 
     [SerializeField] Animator anim;
+
 
     
     void Start()
