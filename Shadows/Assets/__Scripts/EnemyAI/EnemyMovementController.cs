@@ -12,7 +12,7 @@ public class EnemyMovementController : MonoBehaviour
     public Transform attackPoint;
 
     public Animator animator;
-    private Rigidbody2D rBody;
+    public Rigidbody2D rBody;
     private bool isRight = true;
     private Vector2 forwardVector;
     [HideInInspector] public Transform chaseTarget;
@@ -62,11 +62,11 @@ public class EnemyMovementController : MonoBehaviour
 
     public void Flip()
     {
+        Debug.Log("Flipping");
         isRight = !isRight;
         Vector3 temp = transform.localScale;
         temp.x *= -1;
         transform.localScale = temp;
-
         sign.transform.localScale = new Vector3(-sign.transform.localScale.x, sign.transform.localScale.y, sign.transform.localScale.z);
 
     }

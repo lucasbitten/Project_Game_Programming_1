@@ -15,7 +15,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float runSpeed = 8.00f;
     [SerializeField] private float walkSpeed = 5.0f;
     [SerializeField] private int currentHealth = 5;
-    
+
+    private int enemyLayer = 11;
+    private int playerLayer = 9;
+
+
+
     private Rigidbody2D player;
     [SerializeField] Animator anim;
     public Transform[] shadowPoints;
@@ -29,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalMovement;
     private bool jumping;
 
+
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -39,8 +45,12 @@ public class PlayerController : MonoBehaviour
     {
         if (lights.Count != 0){
             visible = true;
-        }else{
+            Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
+        }
+        else
+        {
             visible = false;
+            Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
         }
         //Debug.Log($"speed => {speed}");
         if (Input.GetKey(KeyCode.LeftShift))
@@ -120,7 +130,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Touched the enemy");
+            TakeDamage(1);
         }
     }
 
@@ -151,4 +161,7 @@ public class PlayerController : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
+
+
+
 }

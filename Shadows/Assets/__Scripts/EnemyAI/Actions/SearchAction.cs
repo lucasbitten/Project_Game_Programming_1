@@ -25,28 +25,17 @@ public class SearchAction : Action
     public override void Act(EnemyStateController controller)
     {
         
-        reachLastKnowPosition = Vector3.Distance(controller.enemyMovementController.transform.position, lastKnownPlayerPosition) < 1f;
-        Debug.Log(reachLastKnowPosition);
+        reachLastKnowPosition = Vector3.Distance(controller.enemyMovementController.transform.position, lastKnownPlayerPosition) < 0.5f;
         stats.timeToSearch -= Time.deltaTime;
 
         if (!reachLastKnowPosition)
         {
             controller.enemyMovementController.Move(lastKnownPlayerPosition, controller.stats.searchSpeed);
 
-            //// Go to last known location from player
-            //Vector2 searchVector = Vector2.MoveTowards(
-            //    controller.transform.position,
-            //    lastKnownPlayerPosition,
-            //    0.06f);
-
-            //controller.transform.position = new Vector3(
-            //    searchVector.x,
-            //    controller.transform.position.y,
-            //    controller.transform.position.z);
 
         } else if (reachLastKnowPosition && !controller.attacking)
         {
-
+            controller.enemyMovementController.rBody.velocity = Vector2.zero;
             controller.attacking = true;
             controller.StartCoroutine(searchAttack(controller));
 
@@ -55,14 +44,10 @@ public class SearchAction : Action
 
     IEnumerator searchAttack(EnemyStateController controller)
     {
-        yield return new WaitForSeconds(0.8f);
-        Debug.Log("Search Attacking one side");
         controller.enemyMovementController.animator.SetTrigger("isAttaking");
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(2f);
         controller.enemyMovementController.Flip();
-        Debug.Log("Search Attacking other side");
-        controller.enemyMovementController.animator.SetTrigger("isAttaking");
-        controller.attacking = false;
+        controller.StartCoroutine(searchAttack(controller));
     }
 
 }
