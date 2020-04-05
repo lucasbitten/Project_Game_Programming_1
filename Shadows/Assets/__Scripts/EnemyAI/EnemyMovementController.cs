@@ -21,14 +21,13 @@ public class EnemyMovementController : MonoBehaviour
     public Sprite questionMark;
     public GameObject sign;
 
- 
-
 
     // Start is called before the first frame update
     void Start()
     {
         sign.SetActive(false);
         rBody = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
