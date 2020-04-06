@@ -10,6 +10,8 @@ public class ChaseAction : Action
     {
         controller.enemyMovementController.sign.GetComponent<SpriteRenderer>().sprite = controller.enemyMovementController.exclamation;
         controller.enemyMovementController.sign.SetActive(true);
+        AudioManager.instance.Play("detected");
+        Debug.Log("Audio Detected should work");
     }
 
     public override void Act(EnemyStateController controller)

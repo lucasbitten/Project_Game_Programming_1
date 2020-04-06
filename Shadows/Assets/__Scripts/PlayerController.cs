@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        AudioManager.instance.Play("LevelMusic");
+        Debug.Log("Music from Level");
     }
 
     // Update is called once per frame
@@ -61,7 +63,6 @@ public class PlayerController : MonoBehaviour
         {
             speed = walkSpeed;
         }
-
 
         horizontalMovement = Input.GetAxis("Horizontal");
         if (isGrounded && Input.GetAxis("Jump") > 0)
