@@ -5,54 +5,45 @@ using UnityEngine;
 public class SpotPlayer : MonoBehaviour
 {
 
-    [SerializeField] GameObject spotSign;
-    [SerializeField] Sprite questionMark, exclamation;
 
-    Enemy enemy;
+    ArcherController archer;
     PlayerController player;
+
     void Awake()
     {
         player = FindObjectOfType<PlayerController>();
-        enemy = GetComponentInParent<Enemy>();
+        archer = GetComponentInParent<ArcherController>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == player.gameObject ){
-            if (player.visible){
-                spotSign.GetComponent<SpriteRenderer>().sprite = exclamation;
-                spotSign.SetActive(true);
-                enemy.spotPlayer = true;
-                enemy.currentState = States.STATE_CHASING;
+        if (other.gameObject == player.gameObject)
+        {
+            if (player.visible)
+            {
+
+                archer.PlayerSpotted(true, other.transform.position);
             }
         }
     }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject == player.gameObject ){
-            if (player.visible){
-                spotSign.SetActive(true);
-                spotSign.GetComponent<SpriteRenderer>().sprite = exclamation;
-                enemy.spotPlayer = true;
-                enemy.currentState = States.STATE_CHASING;
+    //void OnTriggerStay2D(Collider2D other)
+    //{
+    //    if (other.gameObject == player.gameObject)
+    //    {
+    //        if (player.visible)
+    //        {
+    //            archer.spottedPlayer = true;
+    //        }
+    //    }
+    //}
 
-            } 
-            // else{
-            //     spotSign.GetComponent<SpriteRenderer>().sprite = questionMark;
-            //     enemy.spotPlayer = false;
-            //     enemy.chasingPlayer = true;
-            // }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject == player.gameObject)
+        {
+            archer.PlayerSpotted(false, other.transform.position);
         }
     }
-
-    // void OnTriggerExit2D(Collider2D other)
-    // {
-    //     if (other.gameObject == player.gameObject ){
-    //         spotSign.SetActive(false);
-    //         enemy.spotPlayer = false;
-    //         enemy.currentState = State.STATE_RETURNING;  //Enemies will return to their initial position
-    //     }
-    // }
 
 }
