@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  jumpForce: 250
+  jumpForce: 230
   groundCheckPos: {fileID: 6313963316198325547}
   whatIsGround:
     serializedVersion: 2
@@ -307,7 +307,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1361225981
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 50
   m_Sprite: {fileID: 5905681027756182028, guid: 07819776c6256444d9d05bcf3d069826,
     type: 3}

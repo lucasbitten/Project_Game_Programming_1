@@ -17,16 +17,20 @@ public class AttackAction : Action
         attackPoint = controller.enemyMovementController.attackPoint;
         stats = controller.stats;
         playerLayer = controller.enemyMovementController.playerLayer;
+        controller.attacking = true;
+
     }
 
     public override void Act(EnemyStateController controller)
     {
-        Debug.Log("Attacking");
-        controller.enemyMovementController.animator.SetTrigger("isAttaking");
 
-        if (Time.time >= controller.nextAttack)
+
+        if (controller.nextAttack <= 0)
         {
-            controller.nextAttack = Time.time + 1f / stats.attackRate;
+            Debug.Log("Attacking");
+            controller.enemyMovementController.animator.SetTrigger("isAttaking");
+            controller.nextAttack = controller.stats.attackRate;
+
         }
 
 

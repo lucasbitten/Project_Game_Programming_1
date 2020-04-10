@@ -29,6 +29,8 @@ public class PatrolToChaseDecision : Decision
         {
             // Store the players position as a new chaseTarget
             controller.enemyMovementController.chaseTarget = hit.transform;
+            AudioManager.instance.Play("detected");
+
             return true;
         } 
         else

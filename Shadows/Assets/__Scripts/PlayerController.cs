@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    private Rigidbody2D player;
+    private Rigidbody2D rbody;
     [SerializeField] Animator anim;
     public Transform[] shadowPoints;
 
@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        player = GetComponent<Rigidbody2D>();
+        rbody = GetComponent<Rigidbody2D>();
         AudioManager.instance.Play("LevelMusic");
         Debug.Log("Music from Level");
     }
@@ -47,12 +47,10 @@ public class PlayerController : MonoBehaviour
     {
         if (lights.Count != 0){
             visible = true;
-            Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
         }
         else
         {
             visible = false;
-            Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
         }
         //Debug.Log($"speed => {speed}");
         if (Input.GetKey(KeyCode.LeftShift))
@@ -65,7 +63,7 @@ public class PlayerController : MonoBehaviour
         }
 
         horizontalMovement = Input.GetAxis("Horizontal");
-        if (isGrounded && Input.GetAxis("Jump") > 0)
+        if (isGrounded && Input.GetAxis("Jump") > 0 )
         {
             jumping = true;
         }
@@ -88,28 +86,28 @@ public class PlayerController : MonoBehaviour
 
         if ( jumping)
         {
-            player.AddForce(new Vector2(0.0f, jumpForce));
+            rbody.AddForce(new Vector2(0.0f, jumpForce));
             isGrounded = false;
         }
 
-        isGrounded = (CheckGround() && player.velocity.y < 0.1f);
+        isGrounded = (CheckGround() && rbody.velocity.y < 0.1f);
 
 
 
-        player.velocity = new Vector2(horizontalMovement * speed, player.velocity.y);
+        rbody.velocity = new Vector2(horizontalMovement * speed, rbody.velocity.y);
 
-        if (isFacingRight && player.velocity.x > 0)
+        if (isFacingRight && rbody.velocity.x > 0)
         {
             Flip();
         }
-        else if (!isFacingRight && player.velocity.x < 0)
+        else if (!isFacingRight && rbody.velocity.x < 0)
         {
             Flip();
         }
         // Animations sections
-        anim.SetFloat("xSpeed", Mathf.Abs(player.velocity.x));
+        anim.SetFloat("xSpeed", Mathf.Abs(rbody.velocity.x));
 
-        anim.SetFloat("ySpeed", player.velocity.y);
+        anim.SetFloat("ySpeed", rbody.velocity.y);
         anim.SetBool("isGrounded", isGrounded);
     }
 
@@ -127,13 +125,13 @@ public class PlayerController : MonoBehaviour
         isFacingRight = !isFacingRight;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            TakeDamage(1);
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if (other.gameObject.CompareTag("Enemy"))
+    //    {
+    //        TakeDamage(1);
+    //    }
+    //}
 
     public void TakeDamage(int damage)
     {

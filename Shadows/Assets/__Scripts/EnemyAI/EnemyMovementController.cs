@@ -42,9 +42,6 @@ public class EnemyMovementController : MonoBehaviour
         {
             Flip();
         }
-
-
-
         // Set parameters in the animator
         animator.SetFloat("xSpeed", Mathf.Abs(rBody.velocity.x));
     }
@@ -61,7 +58,7 @@ public class EnemyMovementController : MonoBehaviour
 
     public void Flip()
     {
-        Debug.Log("Flipping");
+
         isRight = !isRight;
         Vector3 temp = transform.localScale;
         temp.x *= -1;

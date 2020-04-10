@@ -20,9 +20,10 @@ public class SearchToPatrolDecision : Decision
         );
 
         // Check if enemy can see the player
-        if (controller.stats.timeToSearch < 0 && !controller.attacking)
+        if (controller.timeLookingForPlayer <= 0)
         {
             Debug.Log("Search to Patrol true");
+            controller.StopAllCoroutines();
             return true;
         }
         else

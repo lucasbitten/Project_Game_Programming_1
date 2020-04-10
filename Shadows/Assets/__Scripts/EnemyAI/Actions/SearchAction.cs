@@ -6,9 +6,9 @@ using UnityEngine;
 public class SearchAction : Action
 {
     private Vector3 lastKnownPlayerPosition;
-    public float TimeToKeepSearching = 5.0f;
     private EnemyStats stats;
     bool reachLastKnowPosition;
+    bool stopAttack = false;
 
     public override void Init(EnemyStateController controller)
     {
@@ -18,22 +18,24 @@ public class SearchAction : Action
         // Get last position from player after the touches the ground
         lastKnownPlayerPosition = controller.enemyMovementController.chaseTarget.position;
         stats = controller.stats;
-        stats.timeToSearch = TimeToKeepSearching;
+        controller.timeLookingForPlayer = stats.timeToSearch;
         // Set time for keep searching before move to patrol
     }
 
     public override void Act(EnemyStateController controller)
     {
         
-        reachLastKnowPosition = Vector3.Distance(controller.enemyMovementController.transform.position, lastKnownPlayerPosition) < 0.5f;
-        stats.timeToSearch -= Time.deltaTime;
+        //reachLastKnowPosition = Vector3.Distance(controller.enemyMovementController.transform.position, lastKnownPlayerPosition) < 0.5f;
+        reachLastKnowPosition = Mathf.Abs(controller.enemyMovementController.transform.position.x - lastKnownPlayerPosition.x) < 1;
+        controller.timeLookingForPlayer -= Time.deltaTime;
 
         if (!reachLastKnowPosition)
         {
             controller.enemyMovementController.Move(lastKnownPlayerPosition, controller.stats.searchSpeed);
 
 
-        } else if (reachLastKnowPosition && !controller.attacking)
+        }
+        else if (reachLastKnowPosition && !controller.attacking)
         {
             controller.enemyMovementController.rBody.velocity = Vector2.zero;
             controller.attacking = true;
@@ -44,10 +46,22 @@ public class SearchAction : Action
 
     IEnumerator searchAttack(EnemyStateController controller)
     {
+        yield return new WaitForSeconds(0.5f);
         controller.enemyMovementController.animator.SetTrigger("isAttaking");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         controller.enemyMovementController.Flip();
-        controller.StartCoroutine(searchAttack(controller));
+        if (stopAttack)
+        {
+            controller.attacking = false;
+            stopAttack = false;
+            controller.timeLookingForPlayer = 0;
+        }
+        else
+        {
+            stopAttack = true;
+            controller.StartCoroutine(searchAttack(controller));
+            
+        }
     }
 
 }

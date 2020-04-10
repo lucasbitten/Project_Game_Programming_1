@@ -17,9 +17,10 @@ public class EnemyStateController : MonoBehaviour
     [HideInInspector] public EnemyMovementController enemyMovementController;
     [HideInInspector] public float nextAttack = 0f;
     [HideInInspector] public PlayerController player;
-    [HideInInspector] public bool attacking;
+    public bool attacking;
 
     [SerializeField] Animator anim;
+    public float timeLookingForPlayer = 0;
 
 
     
@@ -29,12 +30,16 @@ public class EnemyStateController : MonoBehaviour
         enemyMovementController = GetComponent<EnemyMovementController>();
         currentState.InitState(this);
         stats.currentHealth = stats.maxHealth;
-
+        timeLookingForPlayer = stats.timeToSearch;
     }
 
     void Update()
     {
-        currentState.UpdateState(this);   
+        currentState.UpdateState(this);
+        if (attacking)
+        {
+            nextAttack -= Time.deltaTime;
+        }
     }
 
     //Transitions the state machine to a new state
@@ -63,6 +68,7 @@ public class EnemyStateController : MonoBehaviour
 
     void Die()
     {
+        GetComponent<EnemyMovementController>().sign.SetActive(false);
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
