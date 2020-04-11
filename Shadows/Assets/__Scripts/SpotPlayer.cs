@@ -21,8 +21,8 @@ public class SpotPlayer : MonoBehaviour
         {
             if (player.visible)
             {
-
-                archer.PlayerSpotted(true, other.transform.position);
+                archer.GetComponent<EnemyStateController>().detectedPlayer = true;
+                //archer.PlayerSpotted(true, other.transform.position);
             }
         }
     }
@@ -38,12 +38,12 @@ public class SpotPlayer : MonoBehaviour
     //    }
     //}
 
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject == player.gameObject)
-        {
-            archer.PlayerSpotted(false, other.transform.position);
-        }
-    }
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if (other.gameObject == player.gameObject)
+    //    {
+    //        archer.PlayerSpotted(false, other.transform.position);
+    //    }
+    //}
 
 }

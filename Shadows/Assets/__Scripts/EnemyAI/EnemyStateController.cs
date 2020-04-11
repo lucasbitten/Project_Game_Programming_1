@@ -16,14 +16,16 @@ public class EnemyStateController : MonoBehaviour
     // [Header("Movement Information")]
     [HideInInspector] public EnemyMovementController enemyMovementController;
     [HideInInspector] public float nextAttack = 0f;
-    [HideInInspector] public PlayerController player;
-    public bool attacking;
-
+    [HideInInspector] public float timeLookingForPlayer = 0;
+    [HideInInspector] public bool attacking;
     [SerializeField] Animator anim;
-    public float timeLookingForPlayer = 0;
 
+    [HideInInspector] public PlayerController player;
+    [HideInInspector] public bool detectedPlayer;
 
-    
+    [Header("Archer")]
+    public ArcherController archerController;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
@@ -35,6 +37,10 @@ public class EnemyStateController : MonoBehaviour
 
     void Update()
     {
+        if (player.visible == false)
+        {
+            detectedPlayer = false;
+        }
         currentState.UpdateState(this);
         if (attacking)
         {

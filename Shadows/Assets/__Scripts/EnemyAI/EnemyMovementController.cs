@@ -25,7 +25,10 @@ public class EnemyMovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sign.SetActive(false);
+        if(sign != null)
+        {
+            sign.SetActive(false);
+        }
         rBody = GetComponent<Rigidbody2D>();
 
     }
