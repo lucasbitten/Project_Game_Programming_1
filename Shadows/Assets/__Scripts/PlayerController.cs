@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         rbody = GetComponent<Rigidbody2D>();
         AudioManager.instance.Play("LevelMusic");
-        Debug.Log("Music from Level");
+
     }
 
     // Update is called once per frame

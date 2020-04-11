@@ -15,6 +15,7 @@ public class EnemyMovementController : MonoBehaviour
     public Rigidbody2D rBody;
     private bool isRight = true;
     private Vector2 forwardVector;
+    [HideInInspector] public bool searching = false;
     [HideInInspector] public Transform chaseTarget;
 
     public Sprite exclamation;
@@ -37,11 +38,11 @@ public class EnemyMovementController : MonoBehaviour
     void Update()
     {
         // Check orientation of the enemy
-        if(rBody.velocity.x > 0 && !isRight)
+        if(rBody.velocity.x > 0 && !isRight && !searching)
         {
             Flip();
         }
-        else if (rBody.velocity.x < 0 && isRight)
+        else if (rBody.velocity.x < 0 && isRight && !searching)
         {
             Flip();
         }
@@ -61,7 +62,6 @@ public class EnemyMovementController : MonoBehaviour
 
     public void Flip()
     {
-
         isRight = !isRight;
         Vector3 temp = transform.localScale;
         temp.x *= -1;

@@ -32,6 +32,7 @@ public class SearchAction : Action
         if (!reachLastKnowPosition)
         {
             controller.enemyMovementController.Move(lastKnownPlayerPosition, controller.stats.searchSpeed);
+            controller.enemyMovementController.searching = false;
 
 
         }
@@ -39,6 +40,7 @@ public class SearchAction : Action
         {
             controller.enemyMovementController.rBody.velocity = Vector2.zero;
             controller.attacking = true;
+            controller.StopAllCoroutines();
             controller.StartCoroutine(searchAttack(controller));
 
         }
@@ -46,19 +48,24 @@ public class SearchAction : Action
 
     IEnumerator searchAttack(EnemyStateController controller)
     {
+        controller.enemyMovementController.searching = true;
+
         yield return new WaitForSeconds(0.5f);
         controller.enemyMovementController.animator.SetTrigger("isAttaking");
         yield return new WaitForSeconds(1f);
-        controller.enemyMovementController.Flip();
         if (stopAttack)
         {
+
             controller.attacking = false;
             stopAttack = false;
+            controller.enemyMovementController.searching = false;
             controller.timeLookingForPlayer = 0;
         }
         else
         {
+
             stopAttack = true;
+            controller.enemyMovementController.Flip();
             controller.StartCoroutine(searchAttack(controller));
             
         }

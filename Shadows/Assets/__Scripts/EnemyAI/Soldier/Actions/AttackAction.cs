@@ -27,7 +27,7 @@ public class AttackAction : Action
 
         if (controller.nextAttack <= 0)
         {
-            Debug.Log("Attacking");
+
             controller.enemyMovementController.animator.SetTrigger("isAttaking");
             controller.nextAttack = controller.stats.attackRate;
 

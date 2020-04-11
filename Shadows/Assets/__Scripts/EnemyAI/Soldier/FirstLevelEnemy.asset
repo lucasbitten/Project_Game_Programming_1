@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   patrolSpeed: 1
-  chaseSpeed: 2
+  chaseSpeed: 2.8
   chaseRange: 5
-  timeToSearch: 5
+  timeToSearch: 6
   searchSpeed: 3
   attackRange: 0.5
   attackRate: 1.5
