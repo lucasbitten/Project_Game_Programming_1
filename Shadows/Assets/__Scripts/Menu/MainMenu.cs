@@ -9,6 +9,13 @@ public class MainMenu : MonoBehaviour
 
     public GameObject loadingScreen;
     public Slider slider;
+
+
+    private void Start()
+    {
+        GameManager.Instance.Reset();
+    }
+
     public void SettingsButton(){
 
         mainMenu.SetActive(false);

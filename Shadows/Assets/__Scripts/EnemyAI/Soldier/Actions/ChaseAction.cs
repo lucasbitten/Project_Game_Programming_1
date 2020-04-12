@@ -10,25 +10,29 @@ public class ChaseAction : Action
     {
         controller.enemyMovementController.sign.GetComponent<SpriteRenderer>().sprite = controller.enemyMovementController.exclamation;
         controller.enemyMovementController.sign.SetActive(true);
+        controller.enemyMovementController.searching = false;
+
     }
 
     public override void Act(EnemyStateController controller)
     {
         // Chase Player
 
-        controller.enemyMovementController.Move(controller.enemyMovementController.chaseTarget.position, controller.stats.chaseSpeed);
+        if(HealthManager.Instance.currentHealth > 0)
+        {
+            if (Mathf.Abs(controller.transform.position.x - controller.enemyMovementController.chaseTarget.position.x) > 0.9f)
+            {
+                if (controller.transform.position.x < controller.enemyMovementController.chaseTarget.position.x)
+                {
+                    controller.enemyMovementController.Move(controller.enemyMovementController.chaseTarget.position - Vector3.right * 0.9f, controller.stats.chaseSpeed);
+                }
+                else
+                {
+                    controller.enemyMovementController.Move(controller.enemyMovementController.chaseTarget.position + Vector3.right * 0.9f, controller.stats.chaseSpeed);
 
-
-        //Vector2 chaseVector = Vector2.MoveTowards(
-        //    controller.transform.position,
-        //    controller.enemyMovementController.chaseTarget.position,
-        //    0.06f);
-
-        //controller.transform.position = new Vector3(
-        //    chaseVector.x, 
-        //    controller.transform.position.y, 
-        //    controller.transform.position.z);
-
+                }
+            }
+        }
     }
 
 }

@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6313963314819138499}
   - component: {fileID: 6313963314819138498}
   - component: {fileID: 6313963314819138497}
+  - component: {fileID: 2000597072}
   m_Layer: 9
   m_Name: Player (1)
   m_TagString: Player
@@ -113,7 +114,6 @@ MonoBehaviour:
   groundCheckRadius: 0.15
   runSpeed: 5
   walkSpeed: 3
-  currentHealth: 5
   anim: {fileID: 6313963316107275122}
   shadowPoints:
   - {fileID: 6313963314592252201}
@@ -159,6 +159,24 @@ MonoBehaviour:
     m_Bits: 2048
   damage: 1
   attackRate: 1
+--- !u!114 &2000597072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313963314819138509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44e311e758386d49817e1924e2d79c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayerHealth: 6
+  currentHealth: 6
+  healthImage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &6313963315184730730
 GameObject:
   m_ObjectHideFlags: 0

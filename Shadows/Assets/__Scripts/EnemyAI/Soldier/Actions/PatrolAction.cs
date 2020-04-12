@@ -13,6 +13,8 @@ public class PatrolAction : Action
     {
         controller.enemyMovementController.sign.SetActive(false);
         currentTarget = controller.enemyMovementController.waypoints[0].position;
+        controller.enemyMovementController.searching = false;
+
     }
     public override void Act(EnemyStateController controller)
     {

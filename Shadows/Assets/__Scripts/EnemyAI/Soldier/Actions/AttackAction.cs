@@ -18,6 +18,7 @@ public class AttackAction : Action
         stats = controller.stats;
         playerLayer = controller.enemyMovementController.playerLayer;
         controller.attacking = true;
+        controller.enemyMovementController.searching = false;
 
     }
 

@@ -14,12 +14,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.15f;
     [SerializeField] private float runSpeed = 8.00f;
     [SerializeField] private float walkSpeed = 5.0f;
-    [SerializeField] private int currentHealth = 5;
 
     private int enemyLayer = 11;
     private int playerLayer = 9;
 
-
+    private HealthManager healthManager;
 
     private Rigidbody2D rbody;
     [SerializeField] Animator anim;
@@ -34,9 +33,12 @@ public class PlayerController : MonoBehaviour
     private float horizontalMovement;
     private bool jumping;
 
+    [SerializeField] float damageCountdown = 1;
+
 
     void Start()
     {
+        healthManager = GetComponent<HealthManager>();
         rbody = GetComponent<Rigidbody2D>();
         AudioManager.instance.Play("LevelMusic");
 
@@ -47,10 +49,14 @@ public class PlayerController : MonoBehaviour
     {
         if (lights.Count != 0){
             visible = true;
+            Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, false);
+
         }
         else
         {
             visible = false;
+            Physics2D.IgnoreLayerCollision(playerLayer, enemyLayer, true);
+
         }
         //Debug.Log($"speed => {speed}");
         if (Input.GetKey(KeyCode.LeftShift))
@@ -70,6 +76,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             jumping = false;
+        }
+
+        if (damageCountdown > 0)
+        {
+            damageCountdown -= Time.deltaTime;
         }
 
     }
@@ -125,24 +136,37 @@ public class PlayerController : MonoBehaviour
         isFacingRight = !isFacingRight;
     }
 
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Enemy"))
-    //    {
-    //        TakeDamage(1);
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(1);
+        }
+    }
 
     public void TakeDamage(int damage)
     {
-
-        anim.SetTrigger("isHurt");
-        currentHealth -= damage;
-
-        if (currentHealth <= 0)
+        if (damageCountdown <= 0)
         {
-            Die();
-            StartCoroutine(Respawn());
+            damageCountdown = 1;
+            anim.SetTrigger("isHurt");
+            healthManager.currentHealth -= damage;
+
+            if (healthManager.currentHealth <= 0)
+            {
+                if (GameManager.Instance.playerLives > 0)
+                {
+                    healthManager.currentHealth = healthManager.maxPlayerHealth;
+                    GameManager.Instance.playerHealth = healthManager.currentHealth;
+                    GameManager.Instance.playerLives--;
+                    Die();
+                    StartCoroutine(Respawn());
+                }
+                else
+                {
+                    SceneManager.LoadScene(4);
+                }
+            }
         }
     }
     

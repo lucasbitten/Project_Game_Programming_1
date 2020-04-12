@@ -13,9 +13,9 @@ public class EnemyMovementController : MonoBehaviour
 
     public Animator animator;
     public Rigidbody2D rBody;
-    private bool isRight = true;
+    public bool isRight = true;
     private Vector2 forwardVector;
-    [HideInInspector] public bool searching = false;
+    public bool searching = false;
     [HideInInspector] public Transform chaseTarget;
 
     public Sprite exclamation;

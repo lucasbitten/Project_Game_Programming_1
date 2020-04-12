@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameManager.Instance.playerHealth = other.GetComponent<HealthManager>().currentHealth;
             SceneManager.LoadScene(sceneIndex);
         }
     }

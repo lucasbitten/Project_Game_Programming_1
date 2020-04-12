@@ -27,16 +27,16 @@ public class SpotPlayer : MonoBehaviour
         }
     }
 
-    //void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (other.gameObject == player.gameObject)
-    //    {
-    //        if (player.visible)
-    //        {
-    //            archer.spottedPlayer = true;
-    //        }
-    //    }
-    //}
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject == player.gameObject)
+        {
+            if (player.visible)
+            {
+                archer.GetComponent<EnemyStateController>().detectedPlayer = true;
+            }
+        }
+    }
 
     //void OnTriggerExit2D(Collider2D other)
     //{
